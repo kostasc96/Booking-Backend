@@ -1,0 +1,32 @@
+#spring.datasource.url = jdbc:postgresql://127.0.0.1:5432/TenantsDB
+spring.datasource.url=jdbc:h2:mem:db
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.h2.console.enabled=true
+
+spring.jackson.serialization.fail-on-empty-beans=false
+
+spring.jpa.hibernate.ddl-auto=update
+
+server.port=443
+
+# The format used for the keystore. It could be set to JKS in case it is a JKS file
+server.ssl.key-store-type=PKCS12
+# The path to the keystore containing the certificate
+server.ssl.key-store=classpath:keystore/keystore.p12
+# The password used to generate the certificate
+server.ssl.key-store-password=password
+# The alias mapped to the certificate
+server.ssl.key-alias=tomcat
+
+server.ssl.enabled=true
+
+#trust store location
+#trust.store=classpath:keystore/keystore.p12
+#trust store password
+#trust.store.password=password
+
+app.jwtSecret= JWTSuperSecretKey
+app.jwtExpirationInMs = 604800000
